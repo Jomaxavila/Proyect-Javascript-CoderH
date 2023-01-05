@@ -12,21 +12,24 @@ while (seleccion !== "amor" && seleccion !== "familia" && seleccion !== "sonrisa
 }
 
 if (seleccion === "amor") {
-	let seleccionFinal = amor;
+	seleccionFinal = amor;
 } else if (seleccion === "familia") {
-	let seleccionFinal = familia;
+	seleccionFinal = familia;
 } else if (seleccion === "sonrisa") {
-	let seleccionFinal = sonrisa;
+	seleccionFinal = sonrisa;
 }
+
+console.log('Seleccion final: ', seleccionFinal);
+
 // FUNCION PARA DIRECCIONAR EL RESULTADO AL SLIDER CORRESPONDIENTE Y MNOSTRARLO
 
 function obtenerDiv(seleccionFinal) {
 	if (seleccionFinal === "amor") {
-		return '<div id="amor"></div>';
+		return prompt("Seleccionaste amor");
 	} else if (seleccionFinal === "familia") {
-		return '<div id="familia"></div>';
+		return prompt("Seleccionaste Familia");
 	} else if (seleccionFinal === "sonrisa") {
-		return '<div id="sonrisa"></div>';
+		return prompt("Seleccionaste sonrisa");
 	}
 }
 
