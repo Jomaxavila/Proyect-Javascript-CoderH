@@ -1,3 +1,6 @@
+
+// VARIABLES 
+
 let amor = "amor";
 let familia = "familia";
 let sonrisa = "sonrisa";
@@ -15,7 +18,7 @@ if (seleccion === "amor") {
 } else if (seleccion === "sonrisa") {
 	let seleccionFinal = sonrisa;
 }
-// FUNCION PARA DIRECCIONAR EL RESULTADO AL SLIDER CORRESPONDIENTE
+// FUNCION PARA DIRECCIONAR EL RESULTADO AL SLIDER CORRESPONDIENTE Y MNOSTRARLO
 
 function obtenerDiv(seleccionFinal) {
 	if (seleccionFinal === "amor") {
@@ -26,5 +29,10 @@ function obtenerDiv(seleccionFinal) {
 		return '<div id="sonrisa"></div>';
 	}
 }
+
+// VENTA DE SERVICIOS
+
+
+
 
 
