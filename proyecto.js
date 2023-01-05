@@ -4,7 +4,7 @@ let sonrisa = "sonrisa";
 let seleccion;
 let seleccionFinal;
 
-while (seleccion !== "amor" && seleccion !== "familia" && seleccion !== "sonrisa") {
+while (seleccion !== "amor" && seleccion !== "familia" && seleccion !== "sonrisa" && " salir") {
 	seleccion = prompt("Selecciona una de las siguientes opciones: 'amor', 'familia', 'sonrisa'");
 }
 
@@ -15,6 +15,7 @@ if (seleccion === "amor") {
 } else if (seleccion === "sonrisa") {
 	let seleccionFinal = sonrisa;
 }
+// FUNCION PARA DIRECCIONAR EL RESULTADO AL SLIDER CORRESPONDIENTE
 
 function obtenerDiv(seleccionFinal) {
 	if (seleccionFinal === "amor") {
