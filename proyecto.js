@@ -49,7 +49,7 @@ const servicios = [
 
 ]
 
-// CREAMOS EL ARRAY VACIO PARA QUE AGREGUE LOS SERV.
+// CREAMOS EL NUEVO ARRAY VACIO LLAMADO "CARRITO" PARA QUE AGREGUE LOS SERV.
 
 let carrito = []
 let seleccion = prompt("Hola desea contratar un servicio ? Si o No").toLowerCase();
@@ -117,7 +117,7 @@ while (seleccion != "no") {
 	// UTILICE METODO FOREACH PARA RECORRER EL ARRAY
 
 	while (seleccion === "no") {
-		alert("Gracias por tu compra, hasta pronto")
+		alert("Por favor inicie sesion o cree usuario para finalizar su contratacion de servicios")
 		carrito.forEach((carritoFinal) => {
 			console.log(`servicio: ${carritoFinal.servicio}, unidades: ${carritoFinal.unidades} Precio: ${carritoFinal.precio} total 
 			a pagar por servicio es: ${carritoFinal.precio * carritoFinal.unidades}`)
@@ -136,7 +136,7 @@ function calcular_total(acu, servicios) {
 
 let costoTotal = carrito.reduce(calcular_total, 0);
 console.log("El costo total de tus servicios contratados es :", costoTotal);
-console.log("Por favor inicie sesion o cree usuario para finalizar su contratacion de servicios ")
+
 
 // CREACION DE USUARIO Y LUEGO LOGIN PARA INGRESAR AL SISTEMA Y CONTRATAR LOS SERVICIOS QUE SELECCIONO.
 
@@ -146,6 +146,9 @@ let contra = Number(prompt("Ingrese un numero para su contraseña"));
 alert("Su usuario es:" + user);
 alert("Su contraseña es:" + contra);
 alert("Inicie sesion con usuario y contraseña");
+
+const usuario = user;
+const constraseña = contra;
 
 user = prompt("usuario:");
 contra = prompt("contraseña:");
