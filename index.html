@@ -5,306 +5,236 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Servicios/ Maxi Avila Fotografia </title>
+	<title>Servicios Maxi Avila Fotografia </title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+
+
 
 </head>
 
 <body>
 	<header>
+		<nav class="navbar sticky-top navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="#">Servicios Maxi Avila Fotografia</a>
+			</div>
+			<div class="container_icon" id="mostrar_carrito">
+				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cart-check" viewBox="0 0 16 16" id="ver_carrito">
 
+					<path
+						d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+					<path
+						d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+				</svg>
+			</div>
+		</nav>
 	</header>
 	<main>
 		<h1>
-			Servicios Maxi Avila Fotografia
+			TRABAJEMOS JUNTOS
 		</h1>
-		<h2>
-			Aqui puedes contratar, cotizar, ver ejemplos de los diferentes servicios
-		</h2>
-		<p> Bienvenid@s</p>
-		<button href="#" type="button" class="btn btn-light">Ingresar</button>
+		<h2> ELEGI TU SERVICIO</h2>
 
-	</main>
+		<!-- CONTENIDO DE SERVICIOS  -->
 
-	<!-- SERVICIOS DE FOTOGRAFIA EN CARDS CON IMAGENES -->
-	<section>
-		<div class="card">
-			<div class="row g-0">
-				<div class="col-5 col-sm-4">
-					<img src="" class="img-fluid w-100" alt="card-horizontal-image">
-				</div>
-				<div class="col-7 col-sm-8">
-					<div class="card-body">
-						<h5 class="card-title">Bodas</h5>
-						<p class="card-text">Aqui puedes contratar el servicio</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+		<div class="content_serv" id="cont_serv"></div>
+
+		<!--MODAL CONTAINER - CARRITO -->
+		<div class="modal_container" id="modal_container"></div>
+
+
+
+		<!-- ACA SE VA A MOSTRAR CON EJEMPLOS CADA UNA DE LOS SERVICIOS -->
+		<section>
+			<!-- SLIDER NUMERO 1 AMOR  -->
+
+			<h3>
+				Mira los ejemplos de servicios
+			</h3>
+
+			<div id="carouselExample" class="carousel slide">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="" class="d-block w-100" alt="...">
 					</div>
 				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
 			</div>
-		</div>
-		<div class="card">
-			<div class="row g-0">
-				<div class="col-5 col-sm-4">
-					<img src="" class="img-fluid w-100" alt="card-horizontal-image">
-				</div>
-				<div class="col-7 col-sm-8">
-					<div class="card-body">
-						<h5 class="card-title">Sesiones</h5>
-						<p class="card-text">Aqui puedes contratar el servicio</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+			<!-- SLIDER NUMERO 2 FAMILIA -->
+
+			<div id="carouselExample" class="carousel slide">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="" class="d-block w-100" alt="...">
 					</div>
 				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
 			</div>
-		</div>
-		<div class="card">
-			<div class="row g-0">
-				<div class="col-5 col-sm-4">
-					<img src="" class="img-fluid w-100" alt="card-horizontal-image">
-				</div>
-				<div class="col-7 col-sm-8">
-					<div class="card-body">
-						<h5 class="card-title"> Retratos</h5>
-						<p class="card-text">Aqui puedes contratar el servicio</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+			<!-- SLIDER NUMERO 3 SONRISAS  -->
+
+			<div id="carouselExample" class="carousel slide">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="" class="d-block w-100" alt="...">
 					</div>
 				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
 			</div>
-		</div>
-		<div class="card">
-			<div class="row g-0">
-				<div class="col-5 col-sm-4">
-					<img src="" class="img-fluid w-100" alt="card-horizontal-image">
-				</div>
-				<div class="col-7 col-sm-8">
-					<div class="card-body">
-						<h5 class="card-title">Fotolibros</h5>
-						<p class="card-text">Aqui puedes contratar el servicio.</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="card">
-			<div class="row g-0">
-				<div class="col-5 col-sm-4">
-					<img src="" class="img-fluid w-100" alt="card-horizontal-image">
-				</div>
-				<div class="col-7 col-sm-8">
-					<div class="card-body">
-						<h5 class="card-title">Empresas</h5>
-						<p class="card-text">Aqui puedes contratar el servicio</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="card">
-			<div class="row g-0">
-				<div class="col-5 col-sm-4">
-					<img src="" class="img-fluid w-100" alt="card-horizontal-image">
-				</div>
-				<div class="col-7 col-sm-8">
-					<div class="card-body">
-						<h5 class="card-title"> Fotografia de Productos</h5>
-						<p class="card-text">Aqui puedes contratar el servicio</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="card">
-			<div class="row g-0">
-				<div class="col-5 col-sm-4">
-					<img src="" class="img-fluid w-100" alt="card-horizontal-image">
-				</div>
-				<div class="col-7 col-sm-8">
-					<div class="card-body">
-						<h5 class="card-title">Servicio de SlideShows</h5>
-						<p class="card-text">Aqui puedes contratar el servicio</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<!-- ACA SE VA A MOSTRAR CON EJEMPLOS CADA UNA DE LOS SERVICIOS -->
-	<section>
-		<!-- SLIDER NUMERO 1 AMOR  -->
+			<!-- LOGIN USUARIOS  -->
 
-		<div id="carouselExample" class="carousel slide">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="" class="d-block w-100" alt="...">
+			<form id="loginUser" method="post" class="container">
+				<div class="form-floating mb-3">
+					<input type="text" class="form-control" id="usuario" placeholder="name@example.com">
+					<label for="floatingInput">usuario</label>
 				</div>
-				<div class="carousel-item">
-					<img src="" class="d-block w-100" alt="...">
+				<div class="form-floating mb-3">
+					<input type="email" class="form-control" id="email" placeholder="name@example.com">
+					<label for="floatingInput">email</label>
 				</div>
-				<div class="carousel-item">
-					<img src="" class="d-block w-100" alt="...">
+				<div class="form-floating">
+					<input type="password" class="form-control" id="Password" placeholder="Password">
+					<label for="floatingPassword">Password</label>
 				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
-		</div>
+				<button form="loginUser" type="submit" class="btn btn-primary" data-bs-toggle="tooltip"
+					data-bs-placement="left" title="" data-bs-original-title="Tooltip on left">
+					LOGIN
+				</button>
+			</form>
 
-		<!-- SLIDER NUMERO 2 FAMILIA -->
 
-		<div id="carouselExample" class="carousel slide">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="" class="d-block w-100" alt="...">
-				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
-		</div>
 
-		<!-- SLIDER NUMERO 3 SONRISAS  -->
-
-		<div id="carouselExample" class="carousel slide">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="" class="d-block w-100" alt="...">
-				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
-		</div>
-
-		<!-- LOGIN USUARIOS  -->
-
-		<form id="loginUser" method="post" class="container">
-			<div class="form-floating mb-3">
-				<input type="email" class="form-control" id="email" placeholder="name@example.com">
-				<label for="floatingInput">email</label>
-			</div>
-			<div class="form-floating mb-3">
-				<input type="text" class="form-control" id="usuario" placeholder="name@example.com">
-				<label for="floatingInput">usuario</label>
-			</div>
-			<div class="form-floating">
-				<input type="password" class="form-control" id="Password" placeholder="Password">
-				<label for="floatingPassword">Password</label>
-			</div>
-			<button form="loginUser" type="submit" class="btn btn-primary" data-bs-toggle="tooltip"
-				data-bs-placement="left" title="" data-bs-original-title="Tooltip on left">
-				LOGIN
-			</button>
-		</form>
-
-		<!-- Footer -->
-		<footer class="text-center text-white" style="background-color: #3f51b5">
-			<div class="container">
-				<section class="mt-5">
-					<div class="row text-center d-flex justify-content-center pt-5">
-						<div class="col-md-2">
-							<h6 class="text-uppercase font-weight-bold">
-								<a href="#!" class="text-white">About us</a>
-							</h6>
+			<!-- Footer -->
+			<footer class="text-center text-white" style="background-color: #3f51b5">
+				<div class="container">
+					<section class="mt-5">
+						<div class="row text-center d-flex justify-content-center pt-5">
+							<div class="col-md-2">
+								<h6 class="text-uppercase font-weight-bold">
+									<a href="#!" class="text-white">About us</a>
+								</h6>
+							</div>
+							<div class="col-md-2">
+								<h6 class="text-uppercase font-weight-bold">
+									<a href="#!" class="text-white">Products</a>
+								</h6>
+							</div>
+							<div class="col-md-2">
+								<h6 class="text-uppercase font-weight-bold">
+									<a href="#!" class="text-white">Awards</a>
+								</h6>
+							</div>
+							<div class="col-md-2">
+								<h6 class="text-uppercase font-weight-bold">
+									<a href="#!" class="text-white">Help</a>
+								</h6>
+							</div>
+							<div class="col-md-2">
+								<h6 class="text-uppercase font-weight-bold">
+									<a href="#!" class="text-white">Contact</a>
+								</h6>
+							</div>
 						</div>
-						<div class="col-md-2">
-							<h6 class="text-uppercase font-weight-bold">
-								<a href="#!" class="text-white">Products</a>
-							</h6>
+					</section>
+					<hr class="my-5" />
+					<section class="mb-5">
+						<div class="row d-flex justify-content-center">
+							<div class="col-lg-8">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+									distinctio earum repellat quaerat voluptatibus placeat nam,
+									commodi optio pariatur est quia magnam eum harum corrupti
+									dicta, aliquam sequi voluptate quas.
+								</p>
+							</div>
 						</div>
-						<div class="col-md-2">
-							<h6 class="text-uppercase font-weight-bold">
-								<a href="#!" class="text-white">Awards</a>
-							</h6>
-						</div>
-						<div class="col-md-2">
-							<h6 class="text-uppercase font-weight-bold">
-								<a href="#!" class="text-white">Help</a>
-							</h6>
-						</div>
-						<div class="col-md-2">
-							<h6 class="text-uppercase font-weight-bold">
-								<a href="#!" class="text-white">Contact</a>
-							</h6>
-						</div>
-					</div>
-				</section>
-				<hr class="my-5" />
-				<section class="mb-5">
-					<div class="row d-flex justify-content-center">
-						<div class="col-lg-8">
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-								distinctio earum repellat quaerat voluptatibus placeat nam,
-								commodi optio pariatur est quia magnam eum harum corrupti
-								dicta, aliquam sequi voluptate quas.
-							</p>
-						</div>
-					</div>
-				</section>
-				<section class="text-center mb-5">
-					<a href="" class="text-white me-4">
-						<i class="fab fa-facebook-f"></i>
-					</a>
-					<a href="" class="text-white me-4">
-						<i class="fab fa-twitter"></i>
-					</a>
-					<a href="" class="text-white me-4">
-						<i class="fab fa-google"></i>
-					</a>
-					<a href="" class="text-white me-4">
-						<i class="fab fa-instagram"></i>
-					</a>
-					<a href="" class="text-white me-4">
-						<i class="fab fa-linkedin"></i>
-					</a>
-					<a href="" class="text-white me-4">
-						<i class="fab fa-github"></i>
-					</a>
-				</section>
+					</section>
+					<section class="text-center mb-5">
+						<a href="" class="text-white me-4">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="" class="text-white me-4">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="" class="text-white me-4">
+							<i class="fab fa-google"></i>
+						</a>
+						<a href="" class="text-white me-4">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a href="" class="text-white me-4">
+							<i class="fab fa-linkedin"></i>
+						</a>
+						<a href="" class="text-white me-4">
+							<i class="fab fa-github"></i>
+						</a>
+					</section>
+				</div>
+				<!-- Copyright -->
+				<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+					© 2023 Copyright:
+					<a class="text-white" href="https://mdbootstrap.com/">Maxi Avila Fotografia</a>
+				</div>
+			</footer>
+			<!-- Footer -->
 			</div>
-			<!-- Copyright -->
-			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-				© 2023 Copyright:
-				<a class="text-white" href="https://mdbootstrap.com/">Maxi Avila Fotografia</a>
-			</div>
-		</footer>
-		<!-- Footer -->
-		</div>
-		<!-- bootstrap  -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-			crossorigin="anonymous"></script>
-		<!-- PROYECTO JS -->
-		<script src="proyecto.js"></script>
+			<!-- bootstrap  -->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+				integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+				crossorigin="anonymous"></script>
+			<!-- PROYECTO JS -->
+			<script src="/js/serv.js"></script>
+			<script src="/js/proyecto.js"></script>
 
-	</section>
 
 </body>
 
