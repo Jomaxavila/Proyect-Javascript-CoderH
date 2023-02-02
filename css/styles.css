@@ -3,7 +3,7 @@
 	margin: 0;
 	text-decoration: none;
 	box-sizing: border-box;
-	font-family: "Montserrat", sans-serif, sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 nav {
@@ -163,4 +163,16 @@ h3 {
 	text-align: center;
 	font-size: 18px;
 	margin: 20px 20px;
+}
+
+.cantCarrito {
+	background-color: Ired;
+	color: rgb(190, 6, 6);
+	border-radius: 50%;
+	font-size: 12px;
+	padding: 4px;
+	top: 37px;
+	right: 14px;
+	position: absolute;
+	display: none;
 }

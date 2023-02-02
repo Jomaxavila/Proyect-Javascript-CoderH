@@ -26,7 +26,9 @@ const pintarCarrito = () => {
 		carritoContent.innerHTML = `
 		<img src = "${serv.img}"
 		<h3> ${serv.nombre}</h3 >
-		<p> ${serv.precio}$</p >`;
+		<p>$ ${serv.precio}</p >
+		<p> cantidad ${serv.cantidad}</p>
+		`;
 
 		modal_container.append(carritoContent);
 
@@ -42,17 +44,18 @@ const pintarCarrito = () => {
 
 
 	function calcular_total(acu, servicios) {
-		acu = acu + servicios.precio; return acu
+		acu = acu + (servicios.precio * servicios.cantidad);
+		return acu;
 	}
 
 	const costoTotal = carrito.reduce(calcular_total, 0);
 
 	const totalBuying = document.createElement("div")
 	totalBuying.className = "total_content"
-	totalBuying.innerHTML = `Total a pagar: ${costoTotal}$`;
+	totalBuying.innerHTML = `Total a pagar: $ ${costoTotal}`;
 	modal_container.append(totalBuying)
 
-}
+};
 
 
 verCarrito.addEventListener("click", pintarCarrito);
@@ -63,7 +66,13 @@ const eliminar_servicio = () => {
 	carrito = carrito.filter((carritoNombre) => {
 		return carritoNombre !== foundnombre;
 	});
-
+	carritoCounter();
 	pintarCarrito();
 
-}  
+};
+
+const carritoCounter = () => {
+	cantidadCarrito.style.display = "block";
+	cantidadCarrito.innerText = carrito.length;
+
+};
