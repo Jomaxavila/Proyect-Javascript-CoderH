@@ -37,52 +37,6 @@ servicios.forEach((serv) => {
 	});
 });
 
-verCarrito.addEventListener("click", () => {
-	modal_container.innerHTML = "";
-	modal_container.style.display = "flex";
-	const modalHeader = document.createElement("div");
-	modalHeader.className = "modal_header"
-	modalHeader.innerHTML = `<h1 class="modal_header_title">CARRITO </h1>`;
-
-	contenedorModal.append(modalHeader);
-
-	const modalButton = document.createElement("h2");
-	modalButton.innerText = "X";
-	modalButton.className = "modal_header_button";
-
-	modalButton.addEventListener("click", () => {
-		modal_container.style.display = "none";
-	})
-
-	modalHeader.append(modalButton);
-
-
-	carrito.forEach((serv) => {
-		let carritoContent = document.createElement("div");
-		carritoContent.className = "modal_content";
-		carritoContent.innerHTML = `
-		<img src = "${serv.img}"
-		<h3> ${serv.nombre}</h3 >
-		<p> ${serv.precio}$</p >`;
-
-
-		modal_container.append(carritoContent);
-	});
-
-	function calcular_total(acu, servicios) {
-		acu = acu + servicios.precio; return acu
-	}
-
-	const costoTotal = carrito.reduce(calcular_total, 0);
-
-	const totalBuying = document.createElement("div")
-	totalBuying.className = "total_content"
-	totalBuying.innerHTML = `Total a pagar: ${costoTotal}$`;
-	modal_container.append(totalBuying)
-
-
-
-});
 
 
 
@@ -419,6 +373,5 @@ verCarrito.addEventListener("click", () => {
 // }
 // let ususarios = []
 // ususarios.push(
-
 
 
