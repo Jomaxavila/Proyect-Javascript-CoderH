@@ -27,20 +27,40 @@ const pintarCarrito = () => {
 		<img src = "${serv.img}"
 		<h3> ${serv.nombre}</h3 >
 		<p>$ ${serv.precio}</p >
+		<span class="restar"> - </span>
+		<span class="sumar"> + </span>
 		<p> cantidad ${serv.cantidad}</p>
+		<span class="eliminar_serv"> Eliminar X </span>
+		
 		`;
 
 		modal_container.append(carritoContent);
 
-		let eliminar = document.createElement("span");
-		eliminar.innerText = ("X");
-		eliminar.className = ("delete_serv");
+		let restar = carritoContent.querySelector(".restar");
+		restar.addEventListener("click", () => {
+			if (serv.cantidad !== 1) {
+				serv.cantidad--;
+			}
+			saveLocal();
+			pintarCarrito();
+		});
 
-		carritoContent.append(eliminar);
 
-		eliminar.addEventListener("click", eliminar_servicio);
+		let sumar = carritoContent.querySelector(".sumar");
+		sumar.addEventListener("click", () => {
+			serv.cantidad++;
+			saveLocal();
+			pintarCarrito();
+		});
+
+		let eliminar = carritoContent.querySelector(".eliminar_serv");
+		eliminar.addEventListener("click", (nombre) => {
+			eliminar_servicio(serv.nombre);
+
+		});
 
 	});
+
 
 
 	function calcular_total(acu, servicios) {
@@ -60,19 +80,30 @@ const pintarCarrito = () => {
 
 verCarrito.addEventListener("click", pintarCarrito);
 
-const eliminar_servicio = () => {
-	const foundnombre = carrito.find((element) => element.nombre);
+const eliminar_servicio = (nombre) => {
+	const foundnombre = carrito.find((element) => element.nombre === nombre);
+
+	console.log(foundnombre);
 
 	carrito = carrito.filter((carritoNombre) => {
 		return carritoNombre !== foundnombre;
 	});
 	carritoCounter();
+	saveLocal();
 	pintarCarrito();
 
 };
 
-const carritoCounter = () => {
+const carritoCounter = (nombre) => {
 	cantidadCarrito.style.display = "block";
-	cantidadCarrito.innerText = carrito.length;
+
+	const carritoLength = carrito.length;
+
+	localStorage.setItem("carritoLength", JSON.stringify(carritoLength));
+
+
+	cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
 
 };
+
+carritoCounter();

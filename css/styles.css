@@ -176,3 +176,15 @@ h3 {
 	position: absolute;
 	display: none;
 }
+
+.restar {
+	cursor: pointer;
+}
+
+.sumar {
+	cursor: pointer;
+}
+
+.eliminar_serv {
+	cursor: pointer;
+}
