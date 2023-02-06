@@ -28,10 +28,8 @@ const pintarCarrito = () => {
         <td> <img src = "${serv.img}"</td>
         <td><h6> ${serv.nombre}</h6> </td>
         <td> <p p class="align-items-center justify-content-between bd-highlight mb-2 p-2">$ ${serv.precio}</p ></td>
-        <td><span class="restar btn btn-outline-dark
-"> - </span></td>
-        <td><span class="sumar btn btn-outline-dark
-"> + </span></td>
+        <td><span class="restar btn btn-outline-dark"> - </span></td>
+        <td><span class="sumar btn btn-outline-dark"> + </span></td>
         <td><p class="align-items-center justify-content-between bd-highlight mb-2 p-2"> cantidad ${serv.cantidad}</p></td>
         <td> <span class="eliminar_serv btn btn-outline-danger"> Eliminar X </span></td>
         `;

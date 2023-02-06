@@ -45,6 +45,20 @@ servicios.forEach((serv) => {
 			});
 		}
 		carritoCounter();
+		Toastify({
+			text: "Agregado al carrito",
+			duration: 2000,
+			destination: "https://github.com/apvarun/toastify-js",
+			newWindow: true,
+			close: true,
+			gravity: "bottom", // `top` or `bottom`
+			position: "right", // `left`, `center` or `right`
+			stopOnFocus: true, // Prevents dismissing of toast on hover
+			style: {
+			background: "background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(64,64,213,1) 27%, rgba(0,212,255,1) 100%);",
+			},
+			onClick: function(){} // Callback after click
+		  }).showToast();
 		saveLocal();
 	});
 });

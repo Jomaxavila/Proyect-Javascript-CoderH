@@ -6,8 +6,16 @@
 	font-family: "Montserrat", sans-serif;
 }
 
-nav {
-	display: flex;
+main {
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/img/bodasServicios.jpg);
+  background-position: start;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center;
+  margin-top: 0;
+  
 }
 
 .container_icon svg {
@@ -26,7 +34,10 @@ main h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 5rem;
+	padding: 2rem;
+	color: #fafafa;
+	font-size: 4rem;
+
 }
 
 
@@ -36,6 +47,9 @@ main h2 {
 	justify-content: center;
 	align-items: center;
 	margin: 5rem;
+	font-size: 3rem;
+	color: #fafafa;
+
 }
 
 
