@@ -160,9 +160,10 @@ h3 {
 .total_content {
 	background-color: rgb(173, 166, 166);
 	padding: 10px;
-	text-align: center;
+	justify-content: space-around;
 	font-size: 18px;
 	margin: 20px 20px;
+	gap: 4rem;
 }
 
 .cantCarrito {
