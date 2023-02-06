@@ -1,8 +1,6 @@
 
 
-// CREAMOS EL NUEVO ARRAY VACIO LLAMADO "CARRITO" PARA QUE AGREGUE LOS SERV.
 
-//  ARRAY CON LOS SERVICIOS QUE BRINDAMOS EN MAXI AVILA FOTOGRAFIA.
 const content_serv = document.getElementById("cont_serv");
 const verCarrito = document.getElementById("ver_carrito");
 const contenedorModal = document.getElementById("modal_container");

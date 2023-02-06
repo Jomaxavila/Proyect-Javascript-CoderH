@@ -7,9 +7,7 @@ const pintarCarrito = () => {
     const modalHeader = document.createElement("tr");
     modalHeader.className = "modal_header Contain d-flex align-items-center bd-highlight mb-2 p-2"
     modalHeader.innerHTML = `<td> <h1 class="modal_header_title">CARRITO </h1> </td>`;
-
     contenedorModal.append(modalHeader);
-
     const modalButton = document.createElement("tr");
     modalButton.innerText = "X";
     modalButton.className = "modal_header_button btn btn-danger ";
