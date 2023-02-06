@@ -25,7 +25,7 @@ const pintarCarrito = () => {
         let carritoContent = document.createElement("tr");
         carritoContent.className = "modal_content contain d-flex align-items-center justify-content-between bd-highlight  ";
         carritoContent.innerHTML = `
-        <td> <img src = "${serv.img}"</td>
+        <td> <img src="${serv.img}"</td>
         <td><h6> ${serv.nombre}</h6> </td>
         <td> <p p class="align-items-center justify-content-between bd-highlight mb-2 p-2">$ ${serv.precio}</p ></td>
         <td><span class="restar btn btn-outline-dark"> - </span></td>
