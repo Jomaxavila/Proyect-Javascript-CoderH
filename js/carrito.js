@@ -66,16 +66,18 @@ const pintarCarrito = () => {
         return acu;
     }
 
+   
     const costoTotal = carrito.reduce(calcular_total, 0);
 
     const totalBuying = document.createElement("tr")
     totalBuying.className = "total_content contain  d-flex align-items-center justify-content-between bd-highlight mb-2 p-2";
     totalBuying.innerHTML = `<td class="justify-content-between bd-highlight mb-2 p-2">Total a pagar: $ ${costoTotal}</td>
-	<td> <span class="eliminar_serv btn btn-success
-"> COMPRAR </span></td>`;
+	<td> <span class=" btn_contratar eliminar_serv btn btn-success
+"> CONTRATAR </span></td>`;
     modal_container.append(totalBuying)
 
 };
+
 
 
 verCarrito.addEventListener("click", pintarCarrito);
@@ -107,3 +109,6 @@ const carritoCounter = (nombre) => {
 };
 
 carritoCounter();
+
+
+

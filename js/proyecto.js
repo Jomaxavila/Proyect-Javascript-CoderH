@@ -11,19 +11,19 @@ const cantidadCarrito = document.getElementById("cant_carrito");
 let carrito = JSON.parse(localStorage.getItem("servicios")) || [];
 servicios.forEach((serv) => {
 	let content = document.createElement("div");
-	content.className = "card";
+	content.className = "card d-flex justify-content-center animate__animated animate__fadeInLeft";
 	content.innerHTML = `
 	<img class=" img_card" src="${serv.img}">
 	<h5>${serv.nombre}</h5>
 	<p class="price">$ ${serv.precio}</p>
-	<p class="descrip_card">${serv.descripcion}</p>
+	<p class="descrip_card small p-2">${serv.descripcion}</p>
 
-	`;
+	`; 
 	content_serv.append(content);
 
 	let agregar = document.createElement("button")
 	agregar.innerText = "agregar";
-	agregar.className = "agregar"
+	agregar.className = "agregar btn btn-primary"
 	content.append(agregar);
 
 	agregar.addEventListener("click", () => {

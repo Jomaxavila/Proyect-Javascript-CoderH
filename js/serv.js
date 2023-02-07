@@ -23,7 +23,7 @@ const servicios = [
 
 		nombre: "FOTOLIBRO",
 		precio: 65000,
-		descripcion: "Libro de fotos impresas de primera calidad,tapa simil , maximo de 100 fotos, a los 15 dias del encargo",
+		descripcion: "Libro de fotos impresas de primera calidad, tapa simil cuero, maximo de 100 fotos, a los 15 dias del encargo",
 		img: "img/fotolibro.jpg",
 		cantidad: 1,
 		video: " https://www.youtube.com/embed/3bJGoAC5xLc&t=3s",
