@@ -32,7 +32,7 @@ main {
 main h1 {
 	font-family: "Montserrat", sans-serif;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between
 	align-items: center;
 	padding: 2rem;
 	color: #fafafa;
@@ -104,26 +104,20 @@ h3 {
 	margin: 5rem;
 }
 
+
 .modal_container {
-	width: 70%;
-	margin: 10px 15%;
+	margin: 70px;
+	width: fit-content;
 	color: #fafafa;
-	background-color: rgb(4, 0, 0);
+	background-color: rgb(70, 74, 77);
 	position: fixed;
 	top: 10vh;
 	z-index: 100;
 	border-radius: 5px;
-	overflow: auto;
+	overflow: scroll;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	display: flex;
-}
-
-.modal_container {
-	flex-basis: 30%;
-	min-width: 200px;
-	text-align: center;
 	justify-content: center;
 }
 
@@ -139,6 +133,7 @@ h3 {
 	align-items: center;
 	width: 500px;
 	margin: 20px 20px;
+	
 }
 
 .modal_header_title {
@@ -157,7 +152,6 @@ h3 {
 	flex-direction: row;
 	align-items: center;
 	text-align: center;
-	width: 90%;
 	justify-content: space-around;
 	text-align: center;
 }
@@ -177,11 +171,14 @@ h3 {
 	justify-content: space-around;
 	font-size: 18px;
 	margin: 20px 20px;
-	gap: 4rem;
+	gap: 2rem;
+	width: auto;
+	color: rgb(190, 6, 6);
+	align-items: center;
+	
 }
 
 .cantCarrito {
-	background-color: Ired;
 	color: rgb(190, 6, 6);
 	border-radius: 50%;
 	font-size: 12px;
@@ -207,3 +204,31 @@ h3 {
 
 /* FORM LOGIN - USER  */
 
+.login {
+    width: 360px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+	background-color: rgb(173, 166, 166);
+	color: #fafafa;
+	flex-wrap: wa;
+
+}
+
+.login h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.login form {
+    font-size: 20px;
+}
+
+.login form .form-group {
+    margin-bottom: 12px;
+}
+
+.login form input[type="submit"] {
+    font-size: 20px;
+    margin-top: 15px;
+}

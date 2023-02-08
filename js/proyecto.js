@@ -11,7 +11,7 @@ const cantidadCarrito = document.getElementById("cant_carrito");
 let carrito = JSON.parse(localStorage.getItem("servicios")) || [];
 servicios.forEach((serv) => {
 	let content = document.createElement("div");
-	content.className = "card d-flex justify-content-center animate__animated animate__fadeInLeft";
+	content.className = "card d-flex justify-content-center container animate__animated animate__fadeInLeft";
 	content.innerHTML = `
 	<img class=" img_card" src="${serv.img}">
 	<h5>${serv.nombre}</h5>
@@ -23,7 +23,7 @@ servicios.forEach((serv) => {
 
 	let agregar = document.createElement("button")
 	agregar.innerText = "agregar";
-	agregar.className = "agregar btn btn-primary"
+	agregar.className = "agregar btn btn-primary container"
 	content.append(agregar);
 
 	agregar.addEventListener("click", () => {
@@ -69,10 +69,4 @@ const saveLocal = () => {
 // GET ITEM 
 
 JSON.parse(localStorage.getItem("servicios"));
-
-
-
-
-
-
 

@@ -1,11 +1,14 @@
 
+
+
+
 const pintarCarrito = () => {
 
 
     modal_container.innerHTML = "";
     modal_container.style.display = "flex";
     const modalHeader = document.createElement("tr");
-    modalHeader.className = "modal_header Contain d-flex align-items-center bd-highlight mb-2 p-2"
+    modalHeader.className = "modal_header container d-flex align-items-center bd-highlight mb-2 p-2"
     modalHeader.innerHTML = `<td> <h1 class="modal_header_title">CARRITO </h1> </td>`;
     contenedorModal.append(modalHeader);
     const modalButton = document.createElement("tr");
@@ -21,7 +24,7 @@ const pintarCarrito = () => {
 
     carrito.forEach((serv) => {
         let carritoContent = document.createElement("tr");
-        carritoContent.className = "modal_content contain d-flex align-items-center justify-content-between bd-highlight  ";
+        carritoContent.className = "modal_content container d-flex align-items-center justify-content-between bd-highlight  ";
         carritoContent.innerHTML = `
         <td> <img src="${serv.img}"</td>
         <td><h6> ${serv.nombre}</h6> </td>
@@ -29,7 +32,7 @@ const pintarCarrito = () => {
         <td><span class="restar btn btn-outline-dark"> - </span></td>
         <td><span class="sumar btn btn-outline-dark"> + </span></td>
         <td><p class="align-items-center justify-content-between bd-highlight mb-2 p-2"> cantidad ${serv.cantidad}</p></td>
-        <td> <span class="eliminar_serv btn btn-outline-danger"> Eliminar X </span></td>
+        <td> <span class="eliminar_serv btn btn-outline-danger m-2 p-2 "> Eliminar X </span></td>
         `;
 
         modal_container.append(carritoContent);
@@ -60,21 +63,58 @@ const pintarCarrito = () => {
     });
 
 
-
     function calcular_total(acu, servicios) {
         acu = acu + (servicios.precio * servicios.cantidad);
         return acu;
     }
 
-   
     const costoTotal = carrito.reduce(calcular_total, 0);
-
     const totalBuying = document.createElement("tr")
-    totalBuying.className = "total_content contain  d-flex align-items-center justify-content-between bd-highlight mb-2 p-2";
+    totalBuying.className = "total_content container  d-flex align-items-center justify-content-between bd-highlight mb-2 p-2";
     totalBuying.innerHTML = `<td class="justify-content-between bd-highlight mb-2 p-2">Total a pagar: $ ${costoTotal}</td>
-	<td> <span class=" btn_contratar eliminar_serv btn btn-success
-"> CONTRATAR </span></td>`;
-    modal_container.append(totalBuying)
+	<td> <span class=" btn_contratar eliminar_serv btn btn-success mb-2 p-2
+    "> CONTRATAR </span></td>`;
+    modal_container.append(totalBuying);
+    
+    
+    
+
+    const btnContratar = document.querySelector(".btn_contratar");
+    btnContratar.addEventListener("click", function() {
+    const button_contratar = document.createElement("div")
+    button_contratar.className = "modalButton_compra container mb-2 p-2";
+    button_contratar.innerHTML = `
+    <div class="login container ">
+    <h5 class="text-center">REGISTRATE</h5>
+    <form class="needs-validation">
+        <div class="form-group was-validated">
+            <label class="form-label" for="email">Email address</label>
+            <input class="form-control" type="email" id="email" required>
+            <div class="invalid-feedback">
+                Please enter your email address
+            </div>
+        </div>
+        <div class="form-group was-validated">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" type="password" id="password" required>
+            <div class="invalid-feedback">
+                Please enter your password
+            </div>
+        </div>
+        <div class="form-group form-check">
+            <input class="form-check-input" type="checkbox" id="check">
+            <label class="form-check-label" for="check">Remember me</label>
+        </div>
+        <input class="btn btn-success w-100" type="submit" value="SIGN IN">
+    </form>
+
+</div>
+`;
+
+modal_container.append(button_contratar);
+
+
+});
 
 };
 
@@ -109,6 +149,11 @@ const carritoCounter = (nombre) => {
 };
 
 carritoCounter();
+
+
+
+
+// FORM USER 
 
 
 
