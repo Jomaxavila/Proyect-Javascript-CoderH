@@ -3,28 +3,28 @@
 
 
     const pintarCarrito = () => {
+        
     modal_container.innerHTML = "";
     modal_container.style.display = "flex";
     const modalHeader = document.createElement("tr");
     modalHeader.className = "modal_header container-fluid d-flex align-items-center bd-highlight mb-2 p-2"
-    modalHeader.innerHTML = `<td> <h4 class="modal_header_title animate__animated animate__fadeInLeft ">CARRITO </h4> </td>`;
+    modalHeader.innerHTML = `<td> <h4 class="modal_header_title">CARRITO </h4> </td>`;
     contenedorModal.append(modalHeader);
     const modalButton = document.createElement("tr");
     modalButton.innerText = "X";
     modalButton.className = "modal_header_button btn btn-danger ";
-
     modalButton.addEventListener("click", () => {
-        modal_container.style.display = "none";
-        
+    modal_container.style.display = "none";
+
     })
 
     modalHeader.append(modalButton);
     if (carrito.length === 0) {
         const emptyMessage = document.createElement("tr");
         emptyMessage.className ="emptyMessage container d-flex justify-content-center bd-highlight mb-2 p-2 "
-        emptyMessage.innerHTML = `<td><h3>Carrito vacío</h3></td>`;
+        emptyMessage.innerHTML = `<td><h3> SU CARRITO ESTA VACIO </h3></td>`;
         modal_container.append(emptyMessage);
-        return;
+      
     }
 
     carrito.forEach((serv) => {
@@ -33,11 +33,11 @@
         carritoContent.innerHTML = `
         <td> <img src="${serv.img}"</td>
         <td><h6> ${serv.nombre}</h6> </td>
-        <td> <p p class="align-items-center justify-content-between bd-highlight mb-2 p-2">$ ${serv.precio}</p ></td>
-        <td><span class="restar btn btn-outline-dark"> - </span></td>
+        <td> <p p class="align-items-center justify-content-between bd-highlight mb-2 p-2 ">$ ${serv.precio}</p ></td>
+        <td><span class="restar btn btn-outline-dark "> - </span></td>
         <td><span class="sumar btn btn-outline-dark"> + </span></td>
-        <td><p class="align-items-center justify-content-between bd-highlight mb-2 p-2"> cantidad ${serv.cantidad}</p></td>
-        <td> <span class="eliminar_serv btn btn-outline-danger m-2 p-2 "> Eliminar X </span></td>
+        <td><p class="align-items-center justify-content-between bd-highlight mb-2 p-2 "> cantidad ${serv.cantidad}</p></td>
+        <td> <span class="eliminar_serv btn btn-outline-danger m-2 p-2 container "> Eliminar X </span></td>
         `;
 
         modal_container.append(carritoContent);
@@ -62,7 +62,7 @@
         let eliminar = carritoContent.querySelector(".eliminar_serv");
         eliminar.addEventListener("click", (nombre) => {
             eliminar_servicio(serv.nombre);
-  
+            
         });
 
     });
@@ -76,7 +76,7 @@
     const costoTotal = carrito.reduce(calcular_total, 0);
     const totalBuying = document.createElement("tr")
     totalBuying.className = "total_content container-fluid d-flex align-items-center justify-content-between bd-highlight mb-2";
-    totalBuying.innerHTML = `<td class="justify-content-between bd-highlight mb-2 p-2">Total a pagar: $ ${costoTotal}</td>
+    totalBuying.innerHTML = `<td class="justify-content-between bd-highlight mb-2 p-2 animate__animated animate__pulse">Total a pagar: $ ${costoTotal}</td>
 	<td> <span class=" btn_contratar eliminar_serv btn btn-success mb-2 p-2
     "> CONTRATAR </span></td>`;
     modal_container.append(totalBuying);
@@ -130,15 +130,7 @@ const eliminar_servicio = (nombre) => {
     carritoCounter();
     saveLocal();
     pintarCarrito();
-    verCarrito.addEventListener("click", () => {
-        if (carrito.length === 0) {
-            modal_container.innerHTML = "<div class='modal-header'>Carrito</div><div class='modal-body'>Carrito vacío</div>";
-            modal_container.style.display = "flex";
-        } else {
-            pintarCarrito();
-        }
-    });
-    
+     
 };
 const carritoCounter = (nombre) => {
     cantidadCarrito.style.display = "block";
@@ -150,11 +142,4 @@ cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
 };
 
 carritoCounter();
-
-
-
-
-// FORM USER 
-
-
 

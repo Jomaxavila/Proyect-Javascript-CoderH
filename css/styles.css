@@ -6,38 +6,41 @@
 	font-family: "Montserrat", sans-serif;
 }
 
-main {
 
+main {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/img/bodasServicios.jpg);
   background-position: start;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position-x: center;
-  margin-top: 0;
-  
+  margin-top: 1rem;
 }
 
-.container_icon svg {
+svg {
 
 	justify-content: space-between;
-	width: 70px;
+	width: 60px;
 	height: 30px;
+	margin: 5px;
 	color: black;
 	cursor: pointer;
-
-
+	
+}
+svg:hover{
+	transform: scale(1.2);
+	transition: all ease 600ms;
 }
 
-main h1 {
+ h1 {
 	font-family: "Montserrat", sans-serif;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem;
 	color: #fafafa;
-
-
+	padding: 100px;
+	
 }
 
 
@@ -46,9 +49,8 @@ main h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 5rem;
+	margin: 1rem;
 	color: #fafafa;
-
 }
 
 
@@ -60,8 +62,6 @@ main h2 {
 	margin: 1rem;
 	gap: 4rem;
 	align-items: center;
-
-
 }
 
 .card {
@@ -74,8 +74,10 @@ main h2 {
 	gap: 1rem;
 	background-color: #e1e3e4;
 	border: solid;
-	margin-top: 100px;
+	margin: 30px
+	
 }
+
 
 
 .img_card {
@@ -84,7 +86,10 @@ main h2 {
 	border-radius: 5px;
 	margin: 10px;
 }
-
+.img_card:hover {
+	transform: scale(1.1);
+	transition: all ease 600ms;
+}
 .agregar {
 	background-color: #2a91ff;
 	width: 50%;
@@ -110,7 +115,7 @@ h3 {
 	padding: auto;
 	color: #fafafa;
 	background-color: rgb(70, 74, 77);
-	position: fixed;
+	position: absolute;
 	top: 8vh;
 	z-index: 100;
 	border-radius: 5px;
@@ -118,12 +123,13 @@ h3 {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content:center;
-}
+	}
+
+
 .emptyMessage{
 	border-radius: 5px;
 	align-items: center;
 	justify-content:center;
-0
 }
 
 .delete_serv {
@@ -185,14 +191,13 @@ h3 {
 }
 
 .cantCarrito {
+	display:inline;
 	color: rgb(190, 6, 6);
 	border-radius: 50%;
 	font-size: 12px;
-	padding: 4px;
-	top: 37px;
-	right: 14px;
-	position: absolute;
-	display: none;
+	margin-left: 33px;
+	
+	
 }
 
 .restar {

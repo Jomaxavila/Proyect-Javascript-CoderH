@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,67 +10,49 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 	<link rel="stylesheet" href="css/styles.css">
-
-
-
-
 </head>
-
 <body>
 	<header>
-		<nav class="navbar sticky-top navbar-light bg-light"">
-			<div class="container ">
-				<a class="navbar-brand display-6 mb-2" href="#">Servicios Maxi Avila Fotografia</a>
+		<nav class="navbar navbar-expand-lg bg-light d-flex justify-content-between w-100 fixed-top mb-5"">
+			<div class=" container d-flex justify-content-between">
+				<a class="container navbar-brand display-6 mb-2" href="#">Servicios Maxi Avila Fotografia</a>
 			</div>
 			<div class="container_icon">
-				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cart-check" viewBox="0 0 16 16" id="ver_carrito">
-
+				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cart-check " viewBox="0 0 16 16" id="ver_carrito">
 					<path
 						d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
 					<path
-						d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+						d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0
+						1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915
+						10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
 					<span class="cantCarrito" id="cant_carrito"></span>
 				</svg>
-
-
 			</div>
 		</nav>
 	</header>
 	<main>
-		<h1 class=" d-flex justify-content-center display-1 container-fluid text-center">
-			TRABAJEMOS JUNTOS 
-		</h1>
-		<h2 class=" display-5 text-center"> ELEGI TU SERVICIO</h2>
-
-		<!-- CONTENIDO DE SERVICIOS  -->
-
-		<div class="content_serv" id="cont_serv"></div>
-
-		<!--MODAL CONTAINER - CARRITO -->
-		
-		<div class="modal_container container " id="modal_container"></div>
-
-
-	<!-- BUSCADOR -->
-<section>
-
-	<h3 class="display-6 text-center text-light">
-		Mira los ejemplos de servicios
-	</h3>
+		<h1 class=" container d-flex justify-content-center display-1 mt-5 text-center animate__animated animate__backInDown">
+			TRABAJEMOS JUNTOS </h1>
+		<h2 class=" display-3 text-center mt-5 animate__animated animate__fadeInUp"> ELEGI TU SERVICIO</h2>
 	
+	<section>
+		<!-- CONTENIDO DE SERVICIOS  -->
+		<div class="content_serv" id="cont_serv"></div>
+		<!--MODAL CONTAINER - CARRITO -->
+		<div class="modal_container container " id="modal_container"></div>
+	</section>
+</main>
+	<section>
+		<h3 class="display-6 text-center text-black">
+		Mira los ejemplos de servicios
+		</h3>
 		<div class="content_videos container" id="cont_videos"></div>
-
-</section>
-
+	</section>
 			<!-- LOGIN USUARIOS  -->
 	<div id="logiNewuser" method="post" class="container_form"> 
 
-
-
-
-
 			<!-- Footer -->
-			<footer class="text-center text-white" style="background-color: #3f51b5">
+	<footer class="text-center text-white" style="background-color: #3f51b5">
 				<div class="container">
 					<section class="mt-5">
 						<div class="row text-center d-flex justify-content-center pt-5">
@@ -132,22 +113,22 @@
 					© 2023 Copyright:
 					<a class="text-white" href="https://mdbootstrap.com/">Maxi Avila Fotografia</a>
 				</div>
-			</footer>
-			<!-- Footer -->
-			</div>
-			<!-- toastify -->
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-			<!-- sweetalert2 -->
-			<script src="sweetalert2.all.min.js"></script>
-			<!-- bootstrap  -->
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-				integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-				crossorigin="anonymous"></script>
-			<!-- PROYECTO JS -->
-			<script src="js/serv.js"></script>
-			<script src="js/proyecto.js"></script>
-			<script src="js/carrito.js"></script>
+	</footer>
+		
+	</div>
+	<!-- toastify -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	<!-- sweetalert2 -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+	<!-- bootstrap  -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
+	<!-- PROYECTO JS -->
+	<script src="js/proyecto.js"></script>
+	<script src="js/carrito.js"></script>
+		
 </body>
 
 </html>
