@@ -41,7 +41,9 @@ servicios.forEach((serv) => {
 				precio: serv.precio,
 				cantidad: serv.cantidad,
 			});
+			
 		}
+	
 		carritoCounter();
 		Toastify({
 			text: "Agregado al carrito",

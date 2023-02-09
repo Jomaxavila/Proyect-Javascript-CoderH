@@ -2,14 +2,12 @@
 
 
 
-const pintarCarrito = () => {
-
-
+    const pintarCarrito = () => {
     modal_container.innerHTML = "";
     modal_container.style.display = "flex";
     const modalHeader = document.createElement("tr");
-    modalHeader.className = "modal_header container d-flex align-items-center bd-highlight mb-2 p-2"
-    modalHeader.innerHTML = `<td> <h1 class="modal_header_title">CARRITO </h1> </td>`;
+    modalHeader.className = "modal_header container-fluid d-flex align-items-center bd-highlight mb-2 p-2"
+    modalHeader.innerHTML = `<td> <h4 class="modal_header_title animate__animated animate__fadeInLeft ">CARRITO </h4> </td>`;
     contenedorModal.append(modalHeader);
     const modalButton = document.createElement("tr");
     modalButton.innerText = "X";
@@ -17,14 +15,21 @@ const pintarCarrito = () => {
 
     modalButton.addEventListener("click", () => {
         modal_container.style.display = "none";
+        
     })
 
     modalHeader.append(modalButton);
-
+    if (carrito.length === 0) {
+        const emptyMessage = document.createElement("tr");
+        emptyMessage.className ="emptyMessage container d-flex justify-content-center bd-highlight mb-2 p-2 "
+        emptyMessage.innerHTML = `<td><h3>Carrito vacío</h3></td>`;
+        modal_container.append(emptyMessage);
+        return;
+    }
 
     carrito.forEach((serv) => {
         let carritoContent = document.createElement("tr");
-        carritoContent.className = "modal_content container d-flex align-items-center justify-content-between bd-highlight  ";
+        carritoContent.className = "modal_content container d-flex align-items-center justify-content-be bd-highlight  ";
         carritoContent.innerHTML = `
         <td> <img src="${serv.img}"</td>
         <td><h6> ${serv.nombre}</h6> </td>
@@ -57,7 +62,7 @@ const pintarCarrito = () => {
         let eliminar = carritoContent.querySelector(".eliminar_serv");
         eliminar.addEventListener("click", (nombre) => {
             eliminar_servicio(serv.nombre);
-
+  
         });
 
     });
@@ -70,19 +75,18 @@ const pintarCarrito = () => {
 
     const costoTotal = carrito.reduce(calcular_total, 0);
     const totalBuying = document.createElement("tr")
-    totalBuying.className = "total_content container  d-flex align-items-center justify-content-between bd-highlight mb-2 p-2";
+    totalBuying.className = "total_content container-fluid d-flex align-items-center justify-content-between bd-highlight mb-2";
     totalBuying.innerHTML = `<td class="justify-content-between bd-highlight mb-2 p-2">Total a pagar: $ ${costoTotal}</td>
 	<td> <span class=" btn_contratar eliminar_serv btn btn-success mb-2 p-2
     "> CONTRATAR </span></td>`;
     modal_container.append(totalBuying);
     
     
-    
 
     const btnContratar = document.querySelector(".btn_contratar");
     btnContratar.addEventListener("click", function() {
     const button_contratar = document.createElement("div")
-    button_contratar.className = "modalButton_compra container mb-2 p-2";
+    button_contratar.className = "modalButton_compra container-fluid mb-2 p-2";
     button_contratar.innerHTML = `
     <div class="login container ">
     <h5 class="text-center">REGISTRATE</h5>
@@ -112,40 +116,37 @@ const pintarCarrito = () => {
 `;
 
 modal_container.append(button_contratar);
-
-
 });
-
 };
 
 
-
 verCarrito.addEventListener("click", pintarCarrito);
-
 const eliminar_servicio = (nombre) => {
     const foundnombre = carrito.find((element) => element.nombre === nombre);
-
     console.log(foundnombre);
-
     carrito = carrito.filter((carritoNombre) => {
         return carritoNombre !== foundnombre;
     });
     carritoCounter();
     saveLocal();
     pintarCarrito();
-
+    verCarrito.addEventListener("click", () => {
+        if (carrito.length === 0) {
+            modal_container.innerHTML = "<div class='modal-header'>Carrito</div><div class='modal-body'>Carrito vacío</div>";
+            modal_container.style.display = "flex";
+        } else {
+            pintarCarrito();
+        }
+    });
+    
 };
-
 const carritoCounter = (nombre) => {
     cantidadCarrito.style.display = "block";
+const carritoLength = carrito.length;
 
-    const carritoLength = carrito.length;
+localStorage.setItem("carritoLength", JSON.stringify(carritoLength));
 
-    localStorage.setItem("carritoLength", JSON.stringify(carritoLength));
-
-
-    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
-
+cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
 };
 
 carritoCounter();
