@@ -6,10 +6,7 @@ const verCarrito = document.getElementById("ver_carrito");
 const contenedorModal = document.getElementById("modal_container");
 const cantidadCarrito = document.getElementById("cant_carrito");
 
-
-
 let carrito = JSON.parse(localStorage.getItem("servicios")) || [];
-
 const getServicios = async() =>{
 	const response = await fetch("data.json");
 	const data = await response.json();
@@ -24,12 +21,11 @@ const getServicios = async() =>{
 	
 		`; 
 		content_serv.append(content);
-	
+
 		let agregar = document.createElement("button")
 		agregar.innerText = "agregar";
 		agregar.className = "agregar btn btn-primary container"
 		content.append(agregar);
-	
 		agregar.addEventListener("click", () => {
 			const repeat = carrito.some((repeatServ) => repeatServ.nombre === serv.nombre);
 			if (repeat) {
@@ -47,7 +43,6 @@ const getServicios = async() =>{
 				});
 				
 			}
-		
 			carritoCounter();
 			Toastify({
 				text: "Agregado al carrito",
@@ -69,15 +64,10 @@ const getServicios = async() =>{
 }; 
 getServicios();
 
-
-
-
 // SET ITEM
 const saveLocal = () => {
 	localStorage.setItem("servicios", JSON.stringify(carrito));
 };
-
 // GET ITEM 
-
 JSON.parse(localStorage.getItem("servicios"));
 

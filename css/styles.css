@@ -8,13 +8,13 @@
 
 
 main {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/img/bodasServicios.jpg);
-  background-position: start;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position-x: center;
-  margin-top: 1rem;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/img/bodasServicios.jpg);
+	background-position: start;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position-x: center;
+	margin-top: 1rem;
 }
 
 svg {
@@ -78,8 +78,6 @@ main h2 {
 	
 }
 
-
-
 .img_card {
 	max-width: 90%;
 	height: auto;
@@ -109,7 +107,6 @@ h3 {
 	margin: 5rem;
 }
 
-
 .modal_container {
 	margin: 60px;
 	padding: auto;
@@ -125,7 +122,6 @@ h3 {
 	justify-content:center;
 	}
 
-
 .emptyMessage{
 	border-radius: 5px;
 	align-items: center;
@@ -135,7 +131,6 @@ h3 {
 .delete_serv {
 	cursor: pointer;
 }
-
 
 .modal_header {
 	background-color: rgb(173, 166, 166);
@@ -212,7 +207,12 @@ h3 {
 	cursor: pointer;
 }
 
-
+.content_videos{
+	justify-content: space-between;
+	gap: 2rem;
+	align-items: center;
+	
+}
 /* FORM LOGIN - USER  */
 
 .login {

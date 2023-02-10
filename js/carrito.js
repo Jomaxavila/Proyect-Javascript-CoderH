@@ -1,9 +1,5 @@
 
-
-
-
-    const pintarCarrito = () => {
-        
+    const pintarCarrito = () => {  
     modal_container.innerHTML = "";
     modal_container.style.display = "flex";
     const modalHeader = document.createElement("tr");
@@ -15,16 +11,13 @@
     modalButton.className = "modal_header_button btn btn-danger ";
     modalButton.addEventListener("click", () => {
     modal_container.style.display = "none";
-
     })
-
     modalHeader.append(modalButton);
     if (carrito.length === 0) {
         const emptyMessage = document.createElement("tr");
         emptyMessage.className ="emptyMessage container d-flex justify-content-center bd-highlight mb-2 p-2 "
         emptyMessage.innerHTML = `<td><h3> SU CARRITO ESTA VACIO </h3></td>`;
         modal_container.append(emptyMessage);
-      
     }
 
     carrito.forEach((serv) => {
@@ -39,7 +32,6 @@
         <td><p class="align-items-center justify-content-between bd-highlight mb-2 p-2 "> cantidad ${serv.cantidad}</p></td>
         <td> <span class="eliminar_serv btn btn-outline-danger m-2 p-2 container "> Eliminar X </span></td>
         `;
-
         modal_container.append(carritoContent);
 
         let restar = carritoContent.querySelector(".restar");
@@ -50,29 +42,22 @@
             saveLocal();
             pintarCarrito();
         });
-
-
         let sumar = carritoContent.querySelector(".sumar");
         sumar.addEventListener("click", () => {
             serv.cantidad++;
             saveLocal();
             pintarCarrito();
         });
-
         let eliminar = carritoContent.querySelector(".eliminar_serv");
         eliminar.addEventListener("click", (nombre) => {
-            eliminar_servicio(serv.nombre);
-            
+            eliminar_servicio(serv.nombre);       
         });
-
     });
-
 
     function calcular_total(acu, servicios) {
         acu = acu + (servicios.precio * servicios.cantidad);
         return acu;
     }
-
     const costoTotal = carrito.reduce(calcular_total, 0);
     const totalBuying = document.createElement("tr")
     totalBuying.className = "total_content container-fluid d-flex align-items-center justify-content-between bd-highlight mb-2";
@@ -80,9 +65,6 @@
 	<td> <span class=" btn_contratar eliminar_serv btn btn-success mb-2 p-2
     "> CONTRATAR </span></td>`;
     modal_container.append(totalBuying);
-    
-    
-
     const btnContratar = document.querySelector(".btn_contratar");
     btnContratar.addEventListener("click", function() {
     const button_contratar = document.createElement("div")
@@ -130,7 +112,6 @@ const eliminar_servicio = (nombre) => {
     carritoCounter();
     saveLocal();
     pintarCarrito();
-     
 };
 const carritoCounter = (nombre) => {
     cantidadCarrito.style.display = "block";
@@ -143,3 +124,30 @@ cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
 
 carritoCounter();
 
+
+const key = "AIzaSyDgfkirZ7Z2BS_L4BMUBkwaPzvw6EpGTG4"
+
+fetch ("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCeS-0I8upefNp-VAuI9sBtg&maxResults=6&order=viewCount&key=" + key)
+    .then(response => response.json())
+    .then(data => {
+    let insertVideo = document.getElementById("cont_videos");
+    let videoData = [];
+
+    for (let i = 0; i < 6; i++) {
+    let videoId = data.items[i].id.videoId;
+    let videoName = data.items[i].snippet.title;
+    videoData.push({
+        id: videoId,
+        name: videoName
+    });
+    }
+
+    videoData.forEach(video => {
+        insertVideo.innerHTML += `
+        <h5 class"container d-flex flex-column bd-highlight mb-5 mt-5">${video.name}</h5>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/${video.id}" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in- picture; web-share"
+        allowfullscreen></iframe>
+        `;
+    });
+});
