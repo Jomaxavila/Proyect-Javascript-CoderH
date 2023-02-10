@@ -8,10 +8,10 @@
 		"video": "https://www.youtube.com/embed/QkNpuTs9Q6U"
 	},
 	{
-		"nombre": "SESION",
+		"nombre": "SESIONES",
 		"precio": 40000,
 		"descripcion": "Sesion fotografica de parejas, entrega de material en 4k, minimo de 100 fotos, a los 7 dias del evento",
-		"img": "img/sesion.jpg",
+		"img": "img/sesiones.jpg",
 		"cantidad": 1,
 		"video": "https://www.youtube.com/embed/JWx-j6Ez0qA"
 	},

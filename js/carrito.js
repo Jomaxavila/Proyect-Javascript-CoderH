@@ -125,7 +125,7 @@ cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
 carritoCounter();
 
 
-const key = "AIzaSyDgfkirZ7Z2BS_L4BMUBkwaPzvw6EpGTG4"
+
 
 fetch ("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCeS-0I8upefNp-VAuI9sBtg&maxResults=6&order=viewCount&key=" + key)
     .then(response => response.json())
