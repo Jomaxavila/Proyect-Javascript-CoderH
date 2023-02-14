@@ -127,7 +127,7 @@ carritoCounter();
 
 
 
-fetch ("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCeS-0I8upefNp-VAuI9sBtg&maxResults=6&order=viewCount&key=" + key)
+fetch ("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCeS-0I8upefNp-VAuI9sBtg&maxResults=6&order=viewCount&key=AIzaSyDgfkirZ7Z2BS_L4BMUBkwaPzvw6EpGTG4")
     .then(response => response.json())
     .then(data => {
     let insertVideo = document.getElementById("cont_videos");
